@@ -13,9 +13,8 @@ function App() {
   const windowWidth = useWindowSize().width
   console.log(windowWidth)
   return (
-    <div>
+    <div >
     <Header />
-    {}
     <GlobalStyle windowWidth={windowWidth}/>
       <Routes>
         <Route path="/" element={<Home />} />

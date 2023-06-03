@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle<HeaderInterface>`
 body{
     width: ${(props) => props.windowWidth < 650 ? "90%" : "50%"};
     position: relative;
-    left: ${(props) => props.windowWidth < 650 ? "5%" : "25%"};
+    left: ${(props) => props.windowWidth < 650 ? "4%" : "24%"};
     top: 100px;
 }
 `
