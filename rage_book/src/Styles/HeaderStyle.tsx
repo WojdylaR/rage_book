@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Home from "../Pages/Home"
 import Header from "../Components/Header"
 
 const HeaderStyle = styled.div`
@@ -7,7 +6,7 @@ const HeaderStyle = styled.div`
     display: flex;
     font-family: Nunito Sans;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 70px;
     
     .link{
         text-decoration:none;

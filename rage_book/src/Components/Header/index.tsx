@@ -12,9 +12,11 @@ function Header(){
         if (windowWidth === undefined || windowWidth >=650){
             return(
                 <HeaderStyle>
-                    <Link className="link" id="Service" to="/">Home</Link>
-                    <Link className="link" id="Service" to="/tattoo">Tattoo</Link>
+                    <Link className="link" id="Service" to="/">Tattoo</Link>
+                    <Link className="link" id="Service" to="/flash">Flash</Link>
                     <Link className="link" id="Service" to="/about">About</Link>
+                    <Link className="link" id="Service" to="/booking">Booking info</Link>
+                    <Link className="link" id="Service" to="/contact">Contact</Link>
                 </HeaderStyle>
         )}  else {
             
@@ -31,10 +33,12 @@ function Header(){
                         <div className="bars" id="bar2"></div>
                         <div className="bars" id="bar3"></div>
                     </label>
-                    {menuToggle ? "" :<div className="menu">
-                            <Link className="link" id="Service" to="/">Home</Link>
-                            <Link className="link" id="Service" to="/tattoo">Tattoo</Link>
-                            <Link className="link" id="Service" to="/about">About</Link>
+                    {menuToggle ? "" :<div className="menu" >
+                    <Link onClick={toggleChange} className="link" id="Service" to="/">Tattoo</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/flash">Flash</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/about">About</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/booking">Booking</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/contact">Contact</Link>
                         </div>
                     }
                 </HeaderMobileStyle>

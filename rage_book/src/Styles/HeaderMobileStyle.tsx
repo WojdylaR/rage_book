@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const HeaderMobileStyle = styled.div`
-    position: absolute;
+    position: relative;
     left: 0%;
-    
-    background-color: black;
+    z-index: 2;
+    margin-bottom: 70px;
     width: 100%;
     .link{
         text-decoration: none;
@@ -16,6 +16,9 @@ export const HeaderMobileStyle = styled.div`
         display:flex;
         flex-direction: column;
         gap: 50px;
+        position: absolute;
+        width: 100%;
+        background-color: black;
     }
 
 
@@ -25,7 +28,7 @@ export const HeaderMobileStyle = styled.div`
       
       .toggle {
         position: absolute;
-        top: -75px;
+        top: -100px;
         width: 40px;
         height: 40px;
         cursor: pointer;

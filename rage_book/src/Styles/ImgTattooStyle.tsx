@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ImgLineStyle = styled.div`
+const ImgTattooStyle = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,4 +12,4 @@ const ImgLineStyle = styled.div`
     }
     `
 
-export default ImgLineStyle
+export default ImgTattooStyle
