@@ -12,6 +12,7 @@ body{
     position: relative;
     left: ${(props) => props.windowWidth < 650 ? "4%" : "24%"};
     top: 100px;
+    font-family: Nunito Sans;
 }
 `
 

@@ -2,11 +2,12 @@ import styled from "styled-components"
 import Header from "../Components/Header"
 
 const HeaderStyle = styled.div`
-    color: red;
     display: flex;
     font-family: Nunito Sans;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    border-bottom: 1px grey;
+
     
     .link{
         text-decoration:none;

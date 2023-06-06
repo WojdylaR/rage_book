@@ -1,13 +1,16 @@
-import {ImgFlash} from "../../Components/Tattoo/ImgLine"
 import { FlashStyle } from "../../Styles/FlashStyle"
-import ImgLineStyle from "../../Styles/ImgTattooStyle"
+
+
 
 function Flash(){
     return(
         <FlashStyle>
-            <ImgFlash />
-            <ImgFlash />
-            <ImgFlash />
+            <h1 className="tittle">Flash dispo :</h1>
+            <div className="grid">
+                {[... new Array(10)].map((_, i) => (
+                <img src={require('./../../Assets/tattoo2.png')} className="img"/>
+            ))}
+            </div>
         </FlashStyle>
     )
 }

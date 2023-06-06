@@ -4,7 +4,7 @@ export const HeaderMobileStyle = styled.div`
     position: relative;
     left: 0%;
     z-index: 2;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     width: 100%;
     .link{
         text-decoration: none;

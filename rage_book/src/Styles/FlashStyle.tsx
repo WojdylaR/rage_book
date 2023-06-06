@@ -1,22 +1,37 @@
 import styled from "styled-components";
 
 export const FlashStyle = styled.div`
-    display: flex;
-    border: 2px solid #757575;
-`
+    position: relative;
+    width: 100%;
+    display: grid;
+    top: -25px;
 
-export const ImgFlashStyle = styled.div`
-    justify-content: end;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    min-width: 100px;
+    h1{
+        justify-self: center;
+        margin-bottom: 50px;
+    }
+
+    .grid{
+        display: grid;
+        position: relative;
+        width: 99%;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 10vw));
+        grid-gap: 15px;
+        height: auto;
+        justify-content: space-around;
+        grid-gap: 60px;
+        justify-self: center;
+    }
+    
+    .grid_item{
+        width: 10vw;
+        min-width: 170px;
+    }
+
+
     .img{
-        width: 75%;
-        top: 12%;
-        min-width: 100px;
-        margin-bottom: 20%;
-        margin-top: 20%;
+        width: 10vw;
+    min-width: 170px;
+
+    }
 `

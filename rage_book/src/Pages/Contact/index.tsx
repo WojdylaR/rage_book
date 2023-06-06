@@ -1,8 +1,26 @@
+import { Children } from "react"
+import InputComponentStyle from "../../Styles/InputComponentStyle"
+import ContactStyle from "../../Styles/ContactStyle"
+
+const InputComponent = ({tittle}:any) => {
+    return(
+    <InputComponentStyle >
+        <input type="text" name="text" className="input" placeholder={tittle} />
+    </InputComponentStyle>
+    )
+}
+
 function Contact(){
     return(
-        <div>
-
-        </div>
+        <ContactStyle>
+            <InputComponent tittle={"Nom"}/>
+            <InputComponent tittle={"Prenom"}/>
+            <InputComponent tittle={"Mail"}/>
+            <InputComponent tittle={"Téléphone"}/>
+            <textarea className="champTxt" name='user_message'/>
+            <button className="button">Envoyer</button>
+            
+        </ContactStyle>
     )
 }
 
