@@ -15,7 +15,7 @@ export const FlashStyle = styled.div`
         display: grid;
         position: relative;
         width: 99%;
-        grid-template-columns: repeat(auto-fill, minmax(170px, 10vw));
+        grid-template-columns: repeat(auto-fill, minmax(130px, 10vw));
         grid-gap: 15px;
         height: auto;
         justify-content: space-around;
@@ -25,13 +25,13 @@ export const FlashStyle = styled.div`
     
     .grid_item{
         width: 10vw;
-        min-width: 170px;
+        min-width: 140px;
     }
 
 
     .img{
         width: 10vw;
-    min-width: 170px;
+    min-width: 130px;
 
     }
 `

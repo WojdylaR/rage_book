@@ -27,6 +27,7 @@ const ContactStyle = styled.div`
         --color: #757570;
         padding: 0.8em 1.7em;
         background-color: transparent;
+        margin-bottom: 50px;
         border-radius: .3em;
         position: relative;
         overflow: hidden;

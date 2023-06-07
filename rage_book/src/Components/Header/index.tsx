@@ -7,7 +7,7 @@ import {Link} from "react-router-dom"
 function Header(){
 
     const windowWidth = useWindowSize().width;
-    const [menuToggle, setMenuToggle] = useState(false)
+    const [menuToggle, setMenuToggle] = useState(true)
 
         if (windowWidth === undefined || windowWidth >=650){
             return(
