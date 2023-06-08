@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import useWindowSize from "../../Hook/useScreenSize"
 import { HeaderMobileStyle } from "../../Styles/HeaderMobileStyle";
 import HeaderStyle from "../../Styles/HeaderStyle"
@@ -9,13 +9,14 @@ function Header(){
     const windowWidth = useWindowSize().width;
     const [menuToggle, setMenuToggle] = useState(true)
 
+
         if (windowWidth === undefined || windowWidth >=650){
             return(
                 <HeaderStyle>
-                    <Link className="link" id="Service" to="/">Tattoo</Link>
-                    <Link className="link" id="Service" to="/flash">Flash</Link>
-                    <Link className="link" id="Service" to="/about">About</Link>
-                    <Link className="link" id="Service" to="/booking">Booking info</Link>
+                    <Link className="link" id="Service" to="/">Tattoo</Link><span style={{color: "#ACACAC"}}>-</span>
+                    <Link className="link" id="Service" to="/flash">Flash</Link><span style={{color: "#ACACAC"}}>-</span>
+                    <Link className="link" id="Service" to="/about">About</Link><span style={{color: "#ACACAC"}}>-</span>
+                    <Link className="link" id="Service" to="/booking">Info</Link><span style={{color: "#ACACAC"}}>-</span>
                     <Link className="link" id="Service" to="/contact">Contact</Link>
                 </HeaderStyle>
         )}  else {
@@ -27,7 +28,8 @@ function Header(){
 
             return(
                 <HeaderMobileStyle>
-                    <input type="checkbox" id="checkbox" onClick={toggleChange}/>
+                    <img alt="logo" className="logo" src={require("../../Assets/logo.png")}/>
+                    <input type="checkbox" id="checkbox" onClick={toggleChange} checked={!menuToggle}/>
                     <label htmlFor="checkbox" className="toggle">
                         <div className="bars" id="bar1"></div>
                         <div className="bars" id="bar2"></div>
@@ -37,7 +39,7 @@ function Header(){
                     <Link onClick={toggleChange} className="link" id="Service" to="/">Tattoo</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/flash">Flash</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/about">About</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/booking">Booking</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/booking">Info</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/contact">Contact</Link>
                         </div>
                     }

@@ -12,6 +12,12 @@ export const HeaderMobileStyle = styled.div`
         font-size: 150%;
     }
 
+    .logo{
+      position: absolute;
+      top: -110px;
+      left: 35%;
+    }
+
     .menu{
         display:flex;
         flex-direction: column;

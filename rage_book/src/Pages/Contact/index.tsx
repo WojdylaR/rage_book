@@ -14,8 +14,8 @@ function Contact(){
     return(
         <ContactStyle>
             <InputComponent tittle={"Nom"}/>
-            <InputComponent tittle={"Prenom"}/>
             <InputComponent tittle={"Mail"}/>
+            <InputComponent tittle={"Suject"}/>
             <InputComponent tittle={"Téléphone"}/>
             <textarea className="champTxt" name='user_message'/>
             <button className="button">Envoyer</button>

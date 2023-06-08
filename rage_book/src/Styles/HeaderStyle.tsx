@@ -3,11 +3,12 @@ import Header from "../Components/Header"
 
 const HeaderStyle = styled.div`
     display: flex;
-    font-family: Nunito Sans;
+    font-family: Bebas Neue;
     justify-content: space-between;
     margin-bottom: 50px;
+    font-size: 125%;
     border-bottom: 1px grey;
-
+    letter-spacing : 2px;
     
     .link{
         text-decoration:none;
