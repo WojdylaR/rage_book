@@ -8,9 +8,9 @@ function Tattoo() {
 
     return(
         <TattooStyle >
-            <ImgTattoo />
-            <ImgTattoo n={1}/>
-            {windowsWidth && windowsWidth > 1000 ? <ImgTattoo /> :  ""}
+            <ImgTattoo n={0}/>
+            <ImgTattoo n={windowsWidth && windowsWidth > 650 ? 10 : 16}/>
+            {windowsWidth && windowsWidth > 650 ? <ImgTattoo n={16}/> : ""}
         </TattooStyle>
     )
 }
