@@ -1,20 +1,26 @@
 
+import { useEffect } from "react";
 import useWindowSize from "../../Hook/useScreenSize";
 import ImgTattooStyle from "../../Styles/ImgTattooStyle";
-
+import {gsap} from "gsap"
 
 export function ImgTattoo({n}:any, {gap}:any){
-
     const windowsWidth = useWindowSize().width;
 
+    useEffect(() => {
+                        gsap.fromTo(".img",{opacity: 0}, {opacity: 1, duration: 2})
+                        
+                    }
+            )
+    
+            {console.log("créer")}
     return(
         <ImgTattooStyle >
+        {}
             {[... new Array(windowsWidth && windowsWidth > 650 ? 10 : 16)].map((_, i) => (
                 <img src={require(`./../../Assets/Tattoo/tattoo${i + n}.jpeg`)} className="img"/>
-                
             ))}
-            {windowsWidth && windowsWidth > 650 && n===0 ? <img src={require(`./../../Assets/Tattoo/tattoo31.jpeg`)} className="img"/> : ""}
-            {windowsWidth && windowsWidth > 650 && n===10 ? <img src={require(`./../../Assets/Tattoo/tattoo30.jpeg`)} className="img"/> : ""}
+            
         </ImgTattooStyle>
     )
 }

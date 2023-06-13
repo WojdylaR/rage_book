@@ -1,6 +1,7 @@
 import {ImgTattoo} from "../../Components/Tattoo/ImgLine";
 import useWindowSize from "../../Hook/useScreenSize";
 import TattooStyle from "../../Styles/TattooStyle";
+import {gsap} from "gsap"
 
 function Tattoo() {
 
@@ -8,9 +9,9 @@ function Tattoo() {
 
     return(
         <TattooStyle >
-            <ImgTattoo n={0}/>
-            <ImgTattoo n={windowsWidth && windowsWidth > 650 ? 10 : 16}/>
-            {windowsWidth && windowsWidth > 650 ? <ImgTattoo n={16}/> : ""}
+            <ImgTattoo n={0} key={0}/>
+            <ImgTattoo key={1} n={windowsWidth && windowsWidth > 650 ? 10 : 16}/>
+            {windowsWidth && windowsWidth > 650 ? <ImgTattoo key={3} n={20}/> : ""}
         </TattooStyle>
     )
 }

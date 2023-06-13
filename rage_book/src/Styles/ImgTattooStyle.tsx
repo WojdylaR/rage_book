@@ -4,13 +4,15 @@ const ImgTattooStyle = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    padding: 2px;
     .img{
         width: 99%;
-        padding: 2px;
         margin-bottom: 3px;
-        
+    }
+
+    .img:hover{
+        transform: scale(1.2);
+        border-radius: 2%;
+        border: 3px solid white;
     }
     `
 
