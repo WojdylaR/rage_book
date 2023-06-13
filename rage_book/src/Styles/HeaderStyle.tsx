@@ -17,10 +17,13 @@ const HeaderStyle = styled.div`
     .link{
         text-decoration:none;
         color: #757575  ;
+        transition: 0.3s cubic-bezier(.19,-0.85,.39,1.85);
+        
     }
     .link:hover{
-        transform: scale(1.1);
+        transform: scale(1.2);
         color: black;
+        text-decoration: underline;
     }
 
     .all_logo{
@@ -36,7 +39,14 @@ const HeaderStyle = styled.div`
     }
 
     .logo{
+        transition: 1s 0.1s;
         width: 25px;
+    }
+
+    .logo:hover{
+        rotate: 360deg;
+        transform: scale(1.3);
+        
     }
 `
 

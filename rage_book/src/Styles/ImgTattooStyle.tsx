@@ -7,6 +7,7 @@ const ImgTattooStyle = styled.div`
     .img{
         width: 99%;
         margin-bottom: 3px;
+        transition: 0.2s;
     }
 
     .img:hover{
