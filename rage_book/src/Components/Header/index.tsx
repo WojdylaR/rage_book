@@ -9,15 +9,15 @@ function Header(){
 
     const windowWidth = useWindowSize().width;
     const [menuToggle, setMenuToggle] = useState(true)
-    const {toggleLanguage} = useContext(LanguageContext);
-    const {language} = useContext(LanguageContext)
+    const languageContext = useContext(LanguageContext)
 
 
         if (windowWidth === undefined || windowWidth >=650){
             return(
                 <HeaderStyle>
                     <div className="language">
-                        <button onClick={toggleLanguage}>{language}</button>
+                        <img className="flag" onClick={languageContext.language === "fr" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_fr.png")}></img>
+                        <img className="flag" onClick={languageContext.language === "en" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_uk.png")}></img>
                     </div>
                     <div className="all_link">
                         <Link className="link" id="Service" to="/">Tattoo</Link><span style={{color: "#ACACAC"}}>-</span>

@@ -3,8 +3,25 @@ import Header from "../Components/Header"
 
 const HeaderStyle = styled.div`
 
+    .language{
+        position: absolute;
+        top: -85px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+    }
+
     .flag{
         position: relative;
+        transition: 0.25s;
+        width: 30px;
+    
+    }
+
+    .flag:hover{
+        scale: 1.2;
+        cursor: pointer;
     }
 
     select.flag option[value="Fr"] {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-const About = styled.div``
+const AboutStyle = styled.div``
 
-export default About
+export default AboutStyle
