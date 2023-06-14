@@ -8,12 +8,10 @@ export function ImgTattoo({n}:any, {gap}:any){
     const windowsWidth = useWindowSize().width;
 
     useEffect(() => {
-                        gsap.fromTo(".img",{opacity: 0}, {opacity: 1, duration: 2})
+                        gsap.fromTo(".img",{opacity: 0}, {opacity: 1, duration: 1, stagger:0.02})
                         
                     }
             )
-    
-            {console.log("créer")}
     return(
         <ImgTattooStyle >
         {}

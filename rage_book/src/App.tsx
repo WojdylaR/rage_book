@@ -1,5 +1,4 @@
-import React from "react";
-import HeaderStyle from "./Styles/HeaderStyle";
+import React, { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Tattoo from "./Pages/Tatoo";
 import { About } from "./Pages/About";
@@ -7,24 +6,48 @@ import Header from "./Components/Header";
 import GlobalStyle from "./Styles/GlobalStyle";
 import useWindowSize from "./Hook/useScreenSize";
 import Flash from "./Pages/Flash";
-import Booking from "./Pages/Booking";
 import Contact from "./Pages/Contact";
+import Info from "./Pages/Info";
+
+
+export const LanguageContext = createContext({
+  language: 'fr',
+  toggleLanguage: () => {}
+})
+
 
 function App() {
   
   const windowWidth = useWindowSize().width
   console.log(windowWidth)
+
+  
+
+
+  const [language, setLanguage] = useState('fr')
+  const toggleLanguage = () =>{
+    setLanguage(l => l === 'fr' ? 'en' : 'fr');
+    console.log('yo')
+  }
+
+  const value = {
+    language,
+    toggleLanguage
+  }
+
   return (
     <div >
-    <Header />
-    <GlobalStyle windowWidth={windowWidth}/>
+      <LanguageContext.Provider value={value}>
+      <Header />
+      <GlobalStyle windowWidth={windowWidth}/>
       <Routes>
         <Route path="/" element={<Tattoo />} />
         <Route path="/about" element={<About />} />
         <Route path="/flash" element={<Flash />} />
-        <Route path="/booking" element={<Booking />} />
+        <Route path="/info" element={<Info />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </LanguageContext.Provider>
     </div>
   );
 }

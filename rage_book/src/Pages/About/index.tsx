@@ -1,9 +1,20 @@
+import { useContext } from "react";
+import AboutStyle from "../../Styles/AboutStyle";
+import { LanguageContext } from "../../App";
+
 export function About(){
+
+    const {language} = useContext(LanguageContext)
+
     return(
-        <div style={{background: 'red',
-                        position: "absolute",
-                        left: "0%"}}>
-            About
-        </div>
+        <span>
+            {language === "fr" ? 
+                <AboutStyle>
+                    A propos
+                </AboutStyle>
+            :
+                <AboutStyle>
+                    About
+                </AboutStyle>}</span>
     )
 }

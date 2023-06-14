@@ -3,7 +3,13 @@ import Header from "../Components/Header"
 
 const HeaderStyle = styled.div`
 
-    
+    .flag{
+        position: relative;
+    }
+
+    select.flag option[value="Fr"] {
+        background-color: blue;
+    }
 
     .all_link{
         display: flex;

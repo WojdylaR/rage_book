@@ -1,23 +1,29 @@
-import { useRef, useState } from "react";
+import { useContext, useState } from "react";
 import useWindowSize from "../../Hook/useScreenSize"
 import { HeaderMobileStyle } from "../../Styles/HeaderMobileStyle";
 import HeaderStyle from "../../Styles/HeaderStyle"
 import {Link} from "react-router-dom"
+import { LanguageContext } from "../../App";
 
 function Header(){
 
     const windowWidth = useWindowSize().width;
     const [menuToggle, setMenuToggle] = useState(true)
+    const {toggleLanguage} = useContext(LanguageContext);
+    const {language} = useContext(LanguageContext)
 
 
         if (windowWidth === undefined || windowWidth >=650){
             return(
                 <HeaderStyle>
+                    <div className="language">
+                        <button onClick={toggleLanguage}>{language}</button>
+                    </div>
                     <div className="all_link">
                         <Link className="link" id="Service" to="/">Tattoo</Link><span style={{color: "#ACACAC"}}>-</span>
                         <Link className="link" id="Service" to="/flash">Flash</Link><span style={{color: "#ACACAC"}}>-</span>
                         <Link className="link" id="Service" to="/about">About</Link><span style={{color: "#ACACAC"}}>-</span>
-                        <Link className="link" id="Service" to="/booking">Info</Link><span style={{color: "#ACACAC"}}>-</span>
+                        <Link className="link" id="Service" to="/info">Info</Link><span style={{color: "#ACACAC"}}>-</span>
                         <Link className="link" id="Service" to="/contact">Contact</Link>
                     </div>
                     <div className="all_logo">
@@ -46,7 +52,7 @@ function Header(){
                     <Link onClick={toggleChange} className="link" id="Service" to="/">Tattoo</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/flash">Flash</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/about">About</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/booking">Info</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/info">Info</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/contact">Contact</Link>
                         </div>
                     }
