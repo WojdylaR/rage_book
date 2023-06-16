@@ -16,8 +16,8 @@ function Header(){
             return(
                 <HeaderStyle>
                     <div className="language">
-                        <img className="flag" onClick={languageContext.language === "fr" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_fr.png")}></img>
-                        <img className="flag" onClick={languageContext.language === "en" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_uk.png")}></img>
+                        <img className="flag" style={{scale: languageContext.language ==='fr' ? "1.2" : ""}} onClick={languageContext.language === "fr" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_fr.png")}></img>
+                        <img className="flag" style={{scale: languageContext.language ==='en' ? "1.2" : ""}} onClick={languageContext.language === "en" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_uk.png")}></img>
                     </div>
                     <div className="all_link">
                         <Link className="link" id="Service" to="/">Tattoo</Link><span style={{color: "#ACACAC"}}>-</span>

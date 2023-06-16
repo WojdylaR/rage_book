@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Header from "../Components/Header"
 
 const HeaderStyle = styled.div`
 
@@ -22,10 +21,6 @@ const HeaderStyle = styled.div`
     .flag:hover{
         scale: 1.2;
         cursor: pointer;
-    }
-
-    select.flag option[value="Fr"] {
-        background-color: blue;
     }
 
     .all_link{
