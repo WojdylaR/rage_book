@@ -4,6 +4,7 @@ import { HeaderMobileStyle } from "../../Styles/HeaderMobileStyle";
 import HeaderStyle from "../../Styles/HeaderStyle"
 import {Link} from "react-router-dom"
 import { LanguageContext } from "../../App";
+import { gsap } from "gsap";
 
 function Header(){
 
@@ -34,9 +35,13 @@ function Header(){
                 </HeaderStyle>
         )}  else {
             
-            
+
             const toggleChange = () =>{
                 setMenuToggle(!menuToggle)
+                if (!menuToggle){
+                    gsap.fromTo(".menu",{left: 0}, {left: -650})
+                } else if (menuToggle)
+                    gsap.fromTo(".menu",{left: -650}, {left: 0})
             }
 
             return(
@@ -48,14 +53,14 @@ function Header(){
                         <div className="bars" id="bar2"></div>
                         <div className="bars" id="bar3"></div>
                     </label>
-                    {menuToggle ? "" :<div className="menu" >
-                    <Link onClick={toggleChange} className="link" id="Service" to="/">Tattoo</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/flash">Flash</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/about">About</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/info">Info</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/contact">Contact</Link>
+                   <div className="menu" >
+                    <Link onClick={toggleChange} className="link" id="Service" to="/">TATTOO</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/flash">FLASH</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/about">ABOUT</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/info">INFO</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/contact">CONTACT</Link>
                         </div>
-                    }
+                    
                 </HeaderMobileStyle>
         )}
 }

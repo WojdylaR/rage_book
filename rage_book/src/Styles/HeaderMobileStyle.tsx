@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const HeaderMobileStyle = styled.div`
-    position: relative;
+    position: fixed;
     left: 0%;
     z-index: 2;
     margin-bottom: 50px;
     width: 100%;
     .link{
         text-decoration: none;
-        color: #757575;
+        color: white;
         font-size: 150%;
     }
 
     .logo{
       position: absolute;
-      top: -110px;
+      top: -90px;
       left: 35%;
     }
 
@@ -22,9 +22,14 @@ export const HeaderMobileStyle = styled.div`
         display:flex;
         flex-direction: column;
         gap: 50px;
+        left: -650px;
         position: absolute;
         width: 100%;
-        background-color: black;
+        backdrop-filter: brightness(60%) blur(5px) invert(70%);
+        font-family: Bebas Neue;
+        letter-spacing : 2px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
 
@@ -34,7 +39,8 @@ export const HeaderMobileStyle = styled.div`
       
       .toggle {
         position: absolute;
-        top: -100px;
+        top: -80px;
+        left: 20px;
         width: 40px;
         height: 40px;
         cursor: pointer;

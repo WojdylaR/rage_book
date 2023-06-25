@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
 const HeaderStyle = styled.div`
+    .menu{
+        left: -650px;
+        position: relative;
+    }
 
     .language{
         position: absolute;
