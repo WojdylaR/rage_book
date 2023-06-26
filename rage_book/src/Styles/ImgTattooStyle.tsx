@@ -48,6 +48,8 @@ const ImgTattooStyle = styled.div`
         cursor: pointer;
     }
 
+    
+
     .x{
         position: absolute;
         color: white;
@@ -61,6 +63,21 @@ const ImgTattooStyle = styled.div`
     .x:hover{
         scale:1.3;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 650px){
+        .cadre{
+            left: 4vw;
+        }
+
+        .big_img{
+            width: 90vw;
+        }
+
+        .x{
+            top: -50px;
+            left: 0px;
+        }
     }
 
     `

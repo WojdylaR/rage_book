@@ -39,9 +39,11 @@ function Header(){
             const toggleChange = () =>{
                 setMenuToggle(!menuToggle)
                 if (!menuToggle){
-                    gsap.fromTo(".menu",{left: 0}, {left: -650})
+                    gsap.fromTo(".menu",{left: 0}, {left: -650, duration: 0.5})
+                    gsap.fromTo(".link",{left: 0}, {left: -650, duration: 0.2})
                 } else if (menuToggle)
-                    gsap.fromTo(".menu",{left: -650}, {left: 0})
+                    gsap.fromTo(".menu",{left: -650}, {left:0})
+                    gsap.fromTo(".link",{left: -650}, {left: 25, stagger:0.1})
             }
 
             return(
@@ -53,6 +55,11 @@ function Header(){
                         <div className="bars" id="bar2"></div>
                         <div className="bars" id="bar3"></div>
                     </label>
+                    <div className="language">
+                        <img className="flag" style={{scale: languageContext.language ==='fr' ? "1.2" : ""}} onClick={languageContext.language === "fr" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_fr.png")}></img>
+                        <img className="flag" style={{scale: languageContext.language ==='en' ? "1.2" : ""}} onClick={languageContext.language === "en" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_uk.png")}></img>
+                    </div>
+                    
                    <div className="menu" >
                     <Link onClick={toggleChange} className="link" id="Service" to="/">TATTOO</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/flash">FLASH</Link>

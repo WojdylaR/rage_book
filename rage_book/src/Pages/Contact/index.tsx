@@ -1,8 +1,11 @@
-import { Children } from "react"
+import { Children, useContext, useEffect } from "react"
 import InputComponentStyle from "../../Styles/InputComponentStyle"
 import ContactStyle from "../../Styles/ContactStyle"
+import { gsap } from "gsap"
+import { LanguageContext } from "../../App"
 
 const InputComponent = ({tittle}:any) => {
+    
     return(
     <InputComponentStyle >
         <input type="text" name="text" className="input" placeholder={tittle} />
@@ -11,9 +14,19 @@ const InputComponent = ({tittle}:any) => {
 }
 
 function Contact(){
+
+    const {language} = useContext(LanguageContext)
+
+    useEffect(() => {
+        gsap.fromTo(".input",{opacity: 0}, {opacity: 1, duration: 0.2, stagger:0.05})
+        gsap.fromTo(".champTxt",{opacity: 0}, {opacity: 1, duration: 0.2, delay: 0.2})
+        gsap.fromTo(".button",{opacity: 0}, {opacity: 1, duration: 0.2, delay: 0.2})
+    }
+)
+    
     return(
         <ContactStyle>
-            <InputComponent tittle={"Nom"}/>
+            <InputComponent tittle={language == "fr" ? "Nom" : "Name"}/>
             <InputComponent tittle={"Mail"}/>
             <InputComponent tittle={"Suject"}/>
             <InputComponent tittle={"Téléphone"}/>

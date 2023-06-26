@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 const InputComponentStyle = styled.div`
     position: relative;
-    top 50px;
+    top: 50px;
     width: 35%;
-    min-width: 200px;
+    min-width: 180px;
 
 .input {
+    opacity: 0;
     width: 100%;
     position: relative ;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;

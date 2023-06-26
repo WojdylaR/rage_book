@@ -37,6 +37,7 @@ const HeaderStyle = styled.div`
         letter-spacing : 2px;}
     
     .link{
+        padding: 0 10px 0 10px;
         text-decoration:none;
         color: #757575  ;
         transition: 0.3s cubic-bezier(.19,-0.85,.39,1.85);

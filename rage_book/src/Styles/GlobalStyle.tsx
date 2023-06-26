@@ -1,12 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 import useWindowSize from "../Hook/useScreenSize";
 
+
+
 interface HeaderInterface{
     windowWidth: any;
 }
 
 
 const GlobalStyle = createGlobalStyle<HeaderInterface>`
+
 body{
     width: ${(props) => props.windowWidth < 650 ? "100%" : "60%"};
     position: relative;

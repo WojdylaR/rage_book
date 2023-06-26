@@ -9,6 +9,8 @@ export const HeaderMobileStyle = styled.div`
     .link{
         text-decoration: none;
         color: white;
+        position: relative;
+        left: -650px;
         font-size: 150%;
     }
 
@@ -16,6 +18,26 @@ export const HeaderMobileStyle = styled.div`
       position: absolute;
       top: -90px;
       left: 35%;
+    }
+
+    .language{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 5%;
+      top: -90px;
+    }
+
+    .flag{
+        position: relative;
+        transition: 0.25s;
+        width: 30px;
+    
+    }
+
+    .flag:hover{
+        scale: 1.2;
+        cursor: pointer;
     }
 
     .menu{
