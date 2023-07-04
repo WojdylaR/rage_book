@@ -8,6 +8,7 @@ import useWindowSize from "./Hook/useScreenSize";
 import Flash from "./Pages/Flash";
 import Contact from "./Pages/Contact";
 import Info from "./Pages/Info";
+import PageStyle from "./Styles/PageStyle";
 
 
 export const LanguageContext = createContext({
@@ -40,6 +41,7 @@ function App() {
       <LanguageContext.Provider value={value}>
       <Header />
       <GlobalStyle windowWidth={windowWidth}/>
+      <PageStyle>
       <Routes>
         <Route path="/" element={<Tattoo />} />
         <Route path="/about" element={<About />} />
@@ -47,6 +49,7 @@ function App() {
         <Route path="/info" element={<Info />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      </PageStyle>
       </LanguageContext.Provider>
     </div>
   );

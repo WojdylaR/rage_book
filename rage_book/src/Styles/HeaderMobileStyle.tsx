@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderMobileStyle = styled.div`
-    position: fixed;
     left: 0%;
     z-index: 2;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     width: 100%;
     .link{
         text-decoration: none;
@@ -17,7 +16,9 @@ export const HeaderMobileStyle = styled.div`
     .logo{
       position: absolute;
       top: -90px;
+      z-index: 2;
       left: 35%;
+      
     }
 
     .language{
@@ -45,9 +46,10 @@ export const HeaderMobileStyle = styled.div`
         flex-direction: column;
         gap: 50px;
         left: -650px;
+        z-index: 2;
         position: absolute;
         width: 100%;
-        backdrop-filter: brightness(60%) blur(5px) invert(70%);
+        background: rgb(175, 175, 175, 0.95);
         font-family: Bebas Neue;
         letter-spacing : 2px;
         padding-top: 20px;

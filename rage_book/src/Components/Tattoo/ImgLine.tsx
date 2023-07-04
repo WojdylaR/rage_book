@@ -12,7 +12,7 @@ function Card(props: any){
         setIsOpen(!isOpen)
     }
     return(
-    <CardTattooStyle>
+    <CardTattooStyle className="card">
         <img onClick={toggleOpen} src={require(`./../../Assets/Tattoo/tattoo${props.n + props.i}.jpeg`)} className="img"/>
         {isOpen ?
         <div className="allPage" onClick={toggleOpen}>
@@ -28,12 +28,7 @@ function Card(props: any){
 export function ImgTattoo({n}:any, {gap}:any){
 
     const windowsWidth = useWindowSize().width;
-    
-
-    useEffect(() => {
-                        gsap.fromTo(".img",{opacity: 0}, {opacity: 1, duration: 1, stagger:0.02})
-                    }
-            )
+       
     return(
         <ImgTattooStyle >
         {}

@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 const HeaderStyle = styled.div`
+    position: relative;
+    top: 100px;
+    margin-bottom: 100px;
     .menu{
         left: -650px;
         position: relative;
