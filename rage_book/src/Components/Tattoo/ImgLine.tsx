@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import useWindowSize from "../../Hook/useScreenSize";
 import ImgTattooStyle from "../../Styles/ImgTattooStyle";
-import {gsap} from "gsap"
 import { CardTattooStyle } from "../../Styles/TattooStyle";
 
 

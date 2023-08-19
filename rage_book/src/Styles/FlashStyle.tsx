@@ -34,4 +34,34 @@ export const FlashStyle = styled.div`
         min-height: 300px;
 
     }
+
+    .allPage{
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: rgba(20,20,20, 0.5);
+        justify-content: center;
+    }
+
+    .cadre{
+        display: flex;
+        position: fixed;
+        background-color: white;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+        height: 80vh;
+        cursor: pointer;
+    }
+    .big_img{
+        position: relative;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+    }
+
 `
