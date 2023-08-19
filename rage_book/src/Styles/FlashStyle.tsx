@@ -32,7 +32,7 @@ export const FlashStyle = styled.div`
     .img{
         height: 10vh;
         min-height: 300px;
-
+        cursor: pointer;
     }
 
     .allPage{
