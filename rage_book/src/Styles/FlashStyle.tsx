@@ -24,14 +24,14 @@ export const FlashStyle = styled.div`
     }
     
     .grid_item{
-        width: 10vw;
-        min-width: 260px;
+        height: 10vh;
+        min-height: 300px;
     }
 
 
     .img{
-        width: 10vw;
-    min-width: 250px;
+        height: 10vh;
+        min-height: 300px;
 
     }
 `

@@ -4,6 +4,8 @@ const AboutStyle = styled.div`
     color: #757575;
     font-size: 150%;
     line-height: 1.5;
+    font-family: augusta;
+    font-size: 200%;
     `
 
 export default AboutStyle

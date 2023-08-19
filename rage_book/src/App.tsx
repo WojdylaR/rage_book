@@ -9,6 +9,7 @@ import Flash from "./Pages/Flash";
 import Contact from "./Pages/Contact";
 import Info from "./Pages/Info";
 import PageStyle from "./Styles/PageStyle";
+import './Styles/font.css'
 
 
 export const LanguageContext = createContext({

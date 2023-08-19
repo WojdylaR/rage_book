@@ -9,7 +9,7 @@ export function About(){
     return(
         <span>
             {language === "fr" ? 
-                <AboutStyle>
+                <AboutStyle className="txt_about">
                     Tatoueur.euse autodidacte s'inspire de l'univers 
                     gothique et de l'horreur, toujours avec une ambiance 
                     mystique et envoûtante.<br/>Mon univers est teinté de poupées 

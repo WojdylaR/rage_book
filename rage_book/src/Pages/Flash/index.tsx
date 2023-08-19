@@ -13,7 +13,7 @@ function Flash(){
         <FlashStyle>
             <h1 className="tittle">Flash dispo :</h1>
             <div className="grid">
-                {[... new Array(16)].map((_, i) => (
+                {[... new Array(26)].map((_, i) => (
                 <img alt="flash" src={require(`./../../Assets/Flash/flash${i - 1}.jpeg`)} className="img"/>
             ))}
             </div>
