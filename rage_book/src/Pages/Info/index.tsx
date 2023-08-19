@@ -13,7 +13,7 @@ function Info(){
                 language === 'fr' ?
                     <InfoStyle>
                         <p>
-                            <h1>- Booking info tattoo</h1>
+                            <h1>Booking info tattoo</h1>
 
 
 
@@ -50,7 +50,7 @@ function Info(){
                         Votre confort et l’excellence de votre tatouage sont mes engagements primordiaux</p>
 
                         <p>
-                            <h1>- Soins après tatouage : Cultiver l’art de la cicatrisation </h1>
+                            <h1>Soins après tatouage : Cultiver l’art de la cicatrisation </h1>
 
                         Patientez au moins 2 à 3 jours après la séance de tatouage avant de retirer la secon de peau.<br /><br/>
 
