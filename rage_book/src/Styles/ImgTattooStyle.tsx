@@ -4,9 +4,11 @@ const ImgTattooStyle = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    opacity: 0;
+
     .img{
         width: 99%;
-        margin-bottom: 3px;
+        margin-bottom: -2px;
         transition: 0.2s;   
     }
 

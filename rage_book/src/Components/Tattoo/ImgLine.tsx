@@ -10,17 +10,20 @@ function Card(props: any){
     function toggleOpen (){
         setIsOpen(!isOpen)
     }
-    const numImg = props.nb - (props.n + props.i * 3)
+    const windowsWidth = useWindowSize().width;
+
+    const nbColumn = windowsWidth && windowsWidth > 650 ? 3 : 2
+    const numImg = props.nb - (props.n + props.i * nbColumn)
     console.log(numImg + " " +props.n)
     return(
     <CardTattooStyle className="card">
-        {numImg ? <span>
-        <img onClick={toggleOpen} src={require(`./../../Assets/Tattoo/tattoo${numImg}.jpeg`)} className="img"/>
+        {numImg > 0 ? <span>
+        <img onClick={toggleOpen} src={require(`./../../Assets/Tattoo/tattoo${numImg}.jpg`)} className="img"/>
         {isOpen ?
         <div className="allPage" onClick={toggleOpen}>
             <div className="cadre" onClick={toggleOpen}>
                 <div className="x" onClick={toggleOpen}>X</div>
-                <img onClick={toggleOpen} src={require(`./../../Assets/Tattoo/tattoo${numImg}.jpeg`)} className="big_img"/>
+                <img onClick={toggleOpen} src={require(`./../../Assets/Tattoo/tattoo${numImg}.jpg`)} className="big_img"/>
             </div>
             </div>
         : "" }</span> : ""}
@@ -33,9 +36,9 @@ export function ImgTattoo({n}:any){
     const nbImg = 44;
        
     return(
-        <ImgTattooStyle >
+        <ImgTattooStyle className="array">
         {}
-            {[... new Array(windowsWidth && windowsWidth > 650 ? 14 : 21)].map((_, i) => (
+            {[... new Array(windowsWidth && windowsWidth > 650 ? 15 : 23)].map((_, i) => (
                 <Card i={i} n={n} nb={nbImg}/>
             ))}
             
