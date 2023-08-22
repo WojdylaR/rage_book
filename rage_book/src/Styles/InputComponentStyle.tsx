@@ -4,7 +4,7 @@ const InputComponentStyle = styled.div`
     position: relative;
     top: 50px;
     width: 35%;
-    min-width: 180px;
+    min-width: 150px;
 
 .input {
     opacity: 0;

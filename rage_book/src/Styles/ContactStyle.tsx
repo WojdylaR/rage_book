@@ -5,6 +5,12 @@ const ContactStyle = styled.div`
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    
+    @media screen and (max-width: 650px) {
+        position: relative;
+        width: 90%;
+        left: 5%;
+    }
 
     .champTxt{
         opacity: 0;

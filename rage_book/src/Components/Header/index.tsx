@@ -16,6 +16,7 @@ function Header(){
         if (windowWidth === undefined || windowWidth >=650){
             return(
                 <HeaderStyle>
+                    <span className="logo"><img alt="logo" className="logoImg" src={require("../../Assets/Logo/logo.jpg")}/></span>
                     <div className="language">
                         <img className="flag" style={{scale: languageContext.language ==='fr' ? "1.2" : ""}} onClick={languageContext.language === "fr" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_fr.png")}></img>
                         <img className="flag" style={{scale: languageContext.language ==='en' ? "1.2" : ""}} onClick={languageContext.language === "en" ? () => {} : languageContext.toggleLanguage} src={require("../../Assets/Logo/flag_uk.png")}></img>
@@ -28,9 +29,9 @@ function Header(){
                         <Link className="link" id="Service" to="/contact">Contact</Link>
                     </div>
                     <div className="all_logo">
-                        <a href="https://www.instagram.com/rage_tatt/"><img className="logo" alt="insta_logo" src={require("../../Assets/Logo/logo_instagram.png")}></img></a><span style={{color: "#ACACAC"}}>-</span>
-                        <a href="https://www.facebook.com/rage.tatt.3"><img className="logo" alt="fb_logo" src={require("../../Assets/Logo/logo_facebook.png")}></img></a><span style={{color: "#ACACAC"}}>-</span>
-                        <a href="https://www.tiktok.com/@rage_tatt"><img className="logo" alt="ticktok_logo" src={require("../../Assets/Logo/logo_tiktok.png")}></img></a>
+                        <a href="https://www.instagram.com/rage_tatt/"><img className="logoSocial" alt="insta_logo" src={require("../../Assets/Logo/logo_instagram.png")}></img></a><span style={{color: "#ACACAC"}}>-</span>
+                        <a href="https://www.facebook.com/rage.tatt.3"><img className="logoSocial" alt="fb_logo" src={require("../../Assets/Logo/logo_facebook.png")}></img></a><span style={{color: "#ACACAC"}}>-</span>
+                        <a href="https://www.tiktok.com/@rage_tatt"><img className="logoSocial" alt="ticktok_logo" src={require("../../Assets/Logo/logo_tiktok.png")}></img></a>
                     </div>
                 </HeaderStyle>
         )}  else {
@@ -48,7 +49,7 @@ function Header(){
 
             return(
                 <HeaderMobileStyle>
-                    <img alt="logo" className="logo" src={require("../../Assets/logo.png")}/>
+                    <span className="logo"><img alt="logo" className="logoImg" src={require("../../Assets/Logo/logo.jpg")}/></span>
                     <input type="checkbox" id="checkbox" onClick={toggleChange} checked={!menuToggle}/>
                     <label htmlFor="checkbox" className="toggle">
                         <div className="bars" id="bar1"></div>

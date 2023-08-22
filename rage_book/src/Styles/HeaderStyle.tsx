@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 const HeaderStyle = styled.div`
     position: relative;
-    top: 100px;
-    margin-bottom: 100px;
+    top: 150px;
+    margin-bottom: 150px;
     .menu{
         left: -650px;
         position: relative;
@@ -18,7 +18,21 @@ const HeaderStyle = styled.div`
         width: 100%;
     }
 
+    .logo{
+      position: absolute;
+      top: -150px;
+      z-index: 2;
+      left: 45%;
+      width: 10%;
+      z-index:1;
+    }
+
+    .logoImg{
+      width: 100%;
+      z-index:-1;
+    }
     .flag{
+        top: -25px;
         position: relative;
         transition: 0.25s;
         width: 30px;
@@ -64,12 +78,12 @@ const HeaderStyle = styled.div`
         font-size: 100%;
     }
 
-    .logo{
+    .logoSocial{
         transition: 1s 0.1s;
         width: 25px;
     }
 
-    .logo:hover{
+    .logoSocial:hover{
         rotate: 360deg;
         transform: scale(1.3);
         

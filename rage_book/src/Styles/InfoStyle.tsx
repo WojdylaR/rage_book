@@ -8,4 +8,9 @@ export const InfoStyle = styled.div`
     h1{
         color: black;
     }
+    @media screen and (max-width: 650px) {
+        position: relative;
+        width: 90%;
+        left: 5%;
+    }
 `

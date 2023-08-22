@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderMobileStyle = styled.div`
     left: 0%;
     z-index: 2;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
     width: 100%;
     .link{
         text-decoration: none;
@@ -15,10 +15,16 @@ export const HeaderMobileStyle = styled.div`
 
     .logo{
       position: absolute;
-      top: -90px;
+      top: -120px;
       z-index: 2;
-      left: 35%;
-      
+      left: 37.5%;
+      width: 25%;
+      z-index:1;
+    }
+
+    .logoImg{
+      width: 100%;
+      z-index:-1;
     }
 
     .language{

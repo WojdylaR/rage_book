@@ -6,6 +6,11 @@ const AboutStyle = styled.div`
     line-height: 1.5;
     font-family: augusta;
     font-size: 200%;
+    @media screen and (max-width: 650px) {
+        position: relative;
+        width: 80%;
+        left: 10%;
+    }
     `
 
 export default AboutStyle

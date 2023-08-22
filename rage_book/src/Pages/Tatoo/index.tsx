@@ -9,7 +9,7 @@ function Tattoo() {
     const windowsWidth= useWindowSize().width
 
     useEffect(() =>{
-        gsap.fromTo(".array", {opacity: 0}, {opacity:1, duration: 1, stagger: 0.3, y: 20})})
+        gsap.fromTo(".array", {opacity: 0, y: -20}, {opacity:1, duration: 0.5, stagger: 0.15, y: 20})})
 
     return(
         <TattooStyle >
