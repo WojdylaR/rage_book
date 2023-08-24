@@ -1,14 +1,21 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { InfoStyle } from "../../Styles/InfoStyle"
 import { LanguageContext } from "../../App"
+import { gsap } from "gsap"
 
 function Info(){
    
+
+    
     const {language} = useContext(LanguageContext)
     console.log(language)
+
+    useEffect(() => {
+        gsap.to("span", {opacity: 1, duration: 0.5})
+    })
     
     return(
-        <span>
+        <span style={{opacity: 0}}>
             {
                 language === 'fr' ?
                     <InfoStyle>

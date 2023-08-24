@@ -1,13 +1,17 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import AboutStyle from "../../Styles/AboutStyle";
 import { LanguageContext } from "../../App";
+import { gsap } from "gsap";
 
 export function About(){
 
     const {language} = useContext(LanguageContext)
-
+    useEffect(() => {
+        gsap.to("span", {opacity: 1, duration: 0.5})
+    })
+    
     return(
-        <span>
+        <span style={{opacity: 0}}>
             {language === "fr" ? 
                 <AboutStyle className="txt_about">
                     Tatoueur.euse autodidacte s'inspire de l'univers 

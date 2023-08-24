@@ -28,8 +28,8 @@ function Contact(){
         <ContactStyle>
             <InputComponent tittle={language == "fr" ? "Nom" : "Name"}/>
             <InputComponent tittle={"Mail"}/>
-            <InputComponent tittle={"Suject"}/>
-            <InputComponent tittle={"Téléphone"}/>
+            <InputComponent tittle={language == "fr" ? "Sujet" : "Subject"}/>
+            <InputComponent tittle={language == "fr" ? "Téléphone" : "Number"}/>
             <textarea className="champTxt" name='user_message'/>
             <button className="button">Envoyer</button>
             
