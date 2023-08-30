@@ -40,6 +40,7 @@ const ImgTattooStyle = styled.div`
         align-self: center;
         left: 30vw;
         cursor: pointer;
+        z-index: 3;
     }
     .big_img{
         position: relative;
@@ -68,6 +69,7 @@ const ImgTattooStyle = styled.div`
 
     @media screen and (max-width: 650px){
         .cadre{
+            position: fixed;
             left: 4vw;
         }
 
@@ -79,7 +81,6 @@ const ImgTattooStyle = styled.div`
             top: -50px;
             left: 0px;
         }
-    }
 
     `
 

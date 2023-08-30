@@ -4,7 +4,7 @@ export const FlashStyle = styled.div`
     position: relative;
     width: 100%;
     display: grid;
-    top: -25px;
+    top: 25px;
 
     h1{
         justify-self: center;
@@ -33,6 +33,7 @@ export const FlashStyle = styled.div`
         height: 10vh;
         min-height: 300px;
         cursor: pointer;
+        z-index: -1;
     }
 
     .allPage{
@@ -56,11 +57,12 @@ export const FlashStyle = styled.div`
         align-self: center;
         height: 80vh;
         cursor: pointer;
+        z-index: 3;
     }
     .big_img{
         position: relative;
         height: 100%;
-        z-index: 1;
+        z-index: 4;
         cursor: pointer;
     }
 

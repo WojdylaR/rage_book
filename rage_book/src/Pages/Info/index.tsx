@@ -11,7 +11,7 @@ function Info(){
     console.log(language)
 
     useEffect(() => {
-        gsap.to("span", {opacity: 1, duration: 0.5})
+        gsap.to("span", {opacity: 1, delay: 0.15, duration: 0.5})
     })
     
     return(
@@ -40,7 +40,7 @@ function Info(){
                         </ul>
 
                         Le coût total du tatouage émerge de vos désirs, de la taille et de l'endroit choisi. 
-                        Veuillez noter que certains emplacements (côtes, abdomen, cou, etc.) requièrent davantage de temps et de complexité.<br/>
+                        Veuillez noter que certains emplacements (côtes, abdomen, cou, etc.) requièrent davantage de temps et de complexité.<br/><br/>
 
                         Je recommande vivement d'utiliser une règle pour déterminer les dimensions exactes.<br/><br/>
 
@@ -83,7 +83,51 @@ function Info(){
                     </InfoStyle>
                 :
                     <InfoStyle>
-                        Info En
+                        <p>
+                        <h1>Booking information</h1>
+
+                        To facilitate booking and in order for me to offer you a quotation, it is necessary to contact me with this form:
+                    	<ul>
+                        <li>    Flash tattoo or project</li>
+                    	<li>	Precise description of the conception of your tattoo (photos and drawings are welcome) </li>
+                    	<li>	Position on body</li>
+	                    <li>	Size (approximately in centimeters)</li>
+	                    <li>	Black or color (specify which colors)</li>
+	                    <li>	Budget (only cash is accepted)</li>
+	                    <li>	Time and date availabilities</li>
+	                    <li>	Phone number</li>
+                        </ul>	
+                        The cost of your tattoos is based on your desires, the size and the position of it. Some parts of the body (ribs, abdomen, neck…) are more complex and require more time.
+                        I highly recommend using a ruler to get a clear idea of the size. <br/><br/>
+
+                        For an appointment to be approved, a 30% cash deposit is necessary. <br/><br/>
+                        Due to many late cancellations and in respect to other clients, deposits will not be refunded if you cancel or do not show up. <br/><br/>
+                        The rest of the balance is to be paid on the day of the tattoo.<br/><br/>
+                        For tattoos exceeding 800€, payment in installments at each session is conceivable.<br/><br/>
+
+                        You may bring companions on demand.<br/><br/>
+
+                        For further information or to book an appointment, don’t hesitate to contact me. Your comfort and the excellency of your tattoo are my priorities. 
+                        </p>
+                        <p>
+                        <h1>Tattoo aftercare: Nurturing the art of healing</h1>
+
+                        Wait at least 2-3 days after the appointment before taking off the second skin.<br/><br/>
+
+                        Gently wash your tattoo with lukewarm water, neutral pH soap and clean hands. Dry by applying little dabs with a clean cotton towel. <br/><br/>
+
+                        Softly apply a healing balm in thin layers. I highly recommend using Eucerin’s AQUAPHOR.
+                        Massage until absorption. This gesture will allow the balm to penetrate deeply into the skin enabling a better healing process.
+                        Let your tattoo breath and sleep in clean cotton sheets.<br/><br/>
+
+                        Always wash your hands before touching your tattoo.<br/><br/>
+
+                        Avoid sunlight, swimming pools, saunas, hammams, and intense physical activities that could affect the skin (sweat, impacts, etc.).<br/><br/>
+
+                        Prefer clean cotton for both bed sheets and wide clothes. Try avoiding contact with wool and synthetic material. <br/><br/>
+
+                        Even though they may be our friends, avoid contact with animals.<br/><br/>
+                        </p>
                     </InfoStyle>
             }
         </span>

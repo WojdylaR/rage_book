@@ -9,6 +9,8 @@ export const CardTattooStyle = styled.div`
 const TattooStyle = styled.div`
     display: flex;
     flex-direction: row;
+    position: relative;
+    top: 25px;
 `
 
 export default TattooStyle

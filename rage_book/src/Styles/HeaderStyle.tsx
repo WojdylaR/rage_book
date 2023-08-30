@@ -4,6 +4,7 @@ const HeaderStyle = styled.div`
     position: relative;
     top: 150px;
     margin-bottom: 150px;
+    width: 60%;
     .menu{
         left: -650px;
         position: relative;

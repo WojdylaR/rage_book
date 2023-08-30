@@ -12,9 +12,8 @@ const GlobalStyle = createGlobalStyle<HeaderInterface>`
 
 
 body{
-    width: ${(props) => props.windowWidth < 650 ? "100%" : "60%"};
     position: relative;
-    left: ${(props) => props.windowWidth < 650 ? "-1.8%" : "20%"};
+    left: ${(props) => props.windowWidth < 650 ? "0%" : "20%"};
     background: #ffffff;
     font-family: Nunito Sans;
     position: relative;

@@ -13,7 +13,7 @@ const ContactStyle = styled.div`
     }
 
     .champTxt{
-        opacity: 0;
+        opacity: 1;
         position: relative;
         width: 100%;
         top: 50px;
@@ -31,7 +31,7 @@ const ContactStyle = styled.div`
     }
 
     .button {
-        opacity: 0;
+        opacity: 1;
         --color: #757570;
         padding: 0.8em 1.7em;
         background-color: transparent;

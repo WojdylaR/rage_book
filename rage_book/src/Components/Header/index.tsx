@@ -24,8 +24,8 @@ function Header(){
                     <div className="all_link">
                         <Link className="link" id="Service" to="/">Tattoo</Link><span style={{color: "#ACACAC"}}>-</span>
                         <Link className="link" id="Service" to="/flash">Flash</Link><span style={{color: "#ACACAC"}}>-</span>
-                        <Link className="link" id="Service" to="/about">{languageContext.language === "fr" ? "À Propos" : "About"}</Link><span style={{color: "#ACACAC"}}>-</span>
-                        <Link className="link" id="Service" to="/info">Info</Link><span style={{color: "#ACACAC"}}>-</span>
+                        <Link className="link" id="Service" to="/about">{languageContext.language === 'fr' ? "À Propos" : "About"}</Link><span style={{color: "#ACACAC"}}>-</span>
+                        <Link className="link" id="Service" to="/info   ">Info</Link><span style={{color: "#ACACAC"}}>-</span>
                         <Link className="link" id="Service" to="/contact">Contact</Link>
                     </div>
                     <div className="all_logo">
@@ -64,7 +64,7 @@ function Header(){
                    <div className="menu" >
                     <Link onClick={toggleChange} className="link" id="Service" to="/">TATTOO</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/flash">FLASH</Link>
-                    <Link onClick={toggleChange} className="link" id="Service" to="/about">ABOUT</Link>
+                    <Link onClick={toggleChange} className="link" id="Service" to="/about">{languageContext.language === 'fr' ? "À PROPOS" : "ABOUT"}</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/info">INFO</Link>
                     <Link onClick={toggleChange} className="link" id="Service" to="/contact">CONTACT</Link>
                         </div>

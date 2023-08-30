@@ -27,7 +27,7 @@ function Card(props: any){
 function Flash(){
 
     useEffect(() =>{
-    gsap.fromTo(".img", {opacity: 0, y: -20}, {opacity:1, duration: 0.5, stagger: 0.15   , y: 20})})
+    gsap.fromTo(".img", {opacity: 0}, {opacity: 1})})
 
     return(
         <FlashStyle>

@@ -7,7 +7,7 @@ const InputComponentStyle = styled.div`
     min-width: 150px;
 
 .input {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
     position: relative ;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;

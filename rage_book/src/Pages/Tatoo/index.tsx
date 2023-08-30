@@ -7,10 +7,9 @@ import {gsap} from "gsap"
 function Tattoo() {
 
     const windowsWidth= useWindowSize().width
-
-    useEffect(() =>{
-        gsap.fromTo(".array", {opacity: 0, y: -20}, {opacity:1, duration: 0.5, stagger: 0.15, y: 20})})
-
+    useEffect(() => {
+        gsap.fromTo(".array", {opacity: 0}, {opacity: 1})})
+   
     return(
         <TattooStyle >
             <ImgTattoo n={0} key={0}/>

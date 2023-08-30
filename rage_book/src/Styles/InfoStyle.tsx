@@ -4,6 +4,8 @@ export const InfoStyle = styled.div`
     font-family: augusta;
     font-size: 150%;
     color: #757575;
+    position: relative;
+    top: 25px;
 
     h1{
         color: black;
