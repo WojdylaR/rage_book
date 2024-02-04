@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { FlashStyle } from "../../Styles/FlashStyle"
 import { gsap } from "gsap"
+import Tattoo from "../Tatoo";
 
 function Card(props: any){
     const i = props.i;
@@ -10,7 +11,7 @@ function Card(props: any){
         return (setIsOpen(!isOpen))
     }
     return(
-        <div>
+        <div className="flash">
             <img onClick={toggleIsOpen} alt="flash" src={require(`./../../Assets/Flash/flash${i - 1}.jpeg`)} className="img"/>
             {isOpen ?
             <div className="allPage" onClick={toggleIsOpen}>
@@ -27,7 +28,7 @@ function Card(props: any){
 function Flash(){
 
     useEffect(() =>{
-    gsap.fromTo(".img", {opacity: 0}, {opacity: 1})})
+    gsap.fromTo(".flash", {opacity: 0}, {opacity: 1, stagger: 0.075})},[])
 
     return(
         <FlashStyle>
@@ -36,6 +37,7 @@ function Flash(){
                 <Card i={i}/>
             ))}
             </div>
+
         </FlashStyle>
     )
 }

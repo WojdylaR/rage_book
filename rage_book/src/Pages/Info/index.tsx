@@ -12,7 +12,7 @@ function Info(){
 
     useEffect(() => {
         gsap.to("span", {opacity: 1, delay: 0.15, duration: 0.5})
-    })
+    },[])
     
     return(
         <span style={{opacity: 0}}>

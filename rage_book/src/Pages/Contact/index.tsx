@@ -21,7 +21,7 @@ function Contact(){
         gsap.fromTo(".input",{opacity: 0}, {opacity: 1, duration: 0.2, stagger:0.05})
         gsap.fromTo(".champTxt",{opacity: 0}, {opacity: 1, duration: 0.2, delay: 0.2})
         gsap.fromTo(".button",{opacity: 0}, {opacity: 1, duration: 0.2, delay: 0.2})
-    }
+    },[]
 )
     
     return(

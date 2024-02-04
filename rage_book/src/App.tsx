@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Tattoo from "./Pages/Tatoo";
 import { About } from "./Pages/About";
@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 import Info from "./Pages/Info";
 import PageStyle from "./Styles/PageStyle";
 import './Styles/font.css'
+import Loading from "./Components/loading";
 
 
 export const LanguageContext = createContext({
@@ -22,14 +23,12 @@ function App() {
   
   const windowWidth = useWindowSize().width
   console.log(windowWidth)
-
   
 
-
+  const [charging, setCharging] = useState(true)
   const [language, setLanguage] = useState('fr')
   const toggleLanguage = () =>{
     setLanguage(l => l === 'fr' ? 'en' : 'fr');
-    console.log('yo')
   }
 
   const value = {
@@ -37,6 +36,20 @@ function App() {
     toggleLanguage
   }
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setCharging(false);
+    }, 2500);
+
+    // Nettoie le timeout lors du démontage du composant
+    return () => clearTimeout(timeoutId);
+  }, []); 
+
+  if (charging){
+    return (
+      <Loading />
+    )
+  }else{
   return (
     <div >
       <LanguageContext.Provider value={value}>
@@ -54,6 +67,6 @@ function App() {
       </LanguageContext.Provider>
     </div>
   );
-}
+}}
 
 export default App;

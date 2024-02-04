@@ -4,7 +4,7 @@ const ImgTattooStyle = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    opacity: 0;
+    opacity: 0c;
 
     .img{
         width: 99%;
@@ -80,7 +80,7 @@ const ImgTattooStyle = styled.div`
         .x{
             top: -50px;
             left: 0px;
-        }
+        }}
 
     `
 

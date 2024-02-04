@@ -2,8 +2,7 @@
 import { useEffect, useState } from "react";
 import useWindowSize from "../../Hook/useScreenSize";
 import ImgTattooStyle from "../../Styles/ImgTattooStyle";
-import { CardTattooStyle } from "../../Styles/TattooStyle";
-
+import styled from "styled-components";
 
 function Card(props: any){
     const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +28,13 @@ function Card(props: any){
         : "" }</span> : ""}
     </CardTattooStyle>)
 }
+
+
+export const CardTattooStyle = styled.div`
+     display: flex;
+    flex-direction: column;
+    width: 100%;`
+
 
 export function ImgTattoo({n}:any){
 
